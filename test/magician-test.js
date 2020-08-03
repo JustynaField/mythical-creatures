@@ -8,7 +8,7 @@ describe('Magician', function() {
     assert.instanceOf(new Magician(), Magician);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var magician1 = new Magician({ name: 'Scott' });
     var magician2 = new Magician({ name: 'Casey' });
 
@@ -22,7 +22,7 @@ describe('Magician', function() {
     assert.equal(magician.topHat, true);
   });
 
-  it.skip('should not always have a hat', function() {
+  it('should not always have a hat', function() {
     var magician = new Magician({ name: 'Casey', topHat: false });
 
     assert.equal(magician.topHat, false)

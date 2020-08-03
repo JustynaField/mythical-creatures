@@ -1,8 +1,12 @@
 class Magician {
-  constructor (name) {
-    this.name = name;
-    this.topHat = true;
+  constructor (creature={}) {
+    this.name = creature.name
+    this.topHat = creature.hasOwnProperty('topHat')? creature.topHat :true
+
   }
 }
+
+
+
 
 module.exports = Magician;
