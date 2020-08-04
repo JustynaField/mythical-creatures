@@ -1,5 +1,5 @@
 class Medusa {
-  constructor (name, statues) {
+  constructor (name) {
     this.name = name;
     this.statues = [];
   }
@@ -7,8 +7,10 @@ class Medusa {
   stare (victim) {
     victim.stoned = true;
     this.statues.push(victim);
-    if (this.statues.length === 4) {
-      this.statues.shift().stoned = false;
+
+    if (this.statues.length == 4) {
+      this.statues[0].stoned = false;
+      this.statues.shift(victim)
     }
   }
 }

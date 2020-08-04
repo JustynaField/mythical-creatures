@@ -91,6 +91,7 @@ describe('Medusa', function() {
     assert.equal(medusa.statues.length, 3);
 
     assert.deepEqual(medusa.statues, [victim2, victim3, victim4]);
+
     assert.equal(victim4.stoned, true);
     assert.equal(victim1.stoned, false);
   });

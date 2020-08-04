@@ -1,8 +1,6 @@
 class Magician {
-  constructor (creature={}) {
-    this.name = creature.name
-    this.topHat = creature.hasOwnProperty('topHat')? creature.topHat :true
-
+  constructor ({ name }={}) {
+    this.name = name;
   }
 }
 
