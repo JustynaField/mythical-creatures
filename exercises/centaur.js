@@ -27,7 +27,12 @@ class Centaur {
   }
 
   sleep () {
-    return 'NO!'
+    if (this.layingDown == true){
+      this.cranky = false;
+      return 'ZZZZ'
+    } else {
+      return 'NO!'
+    }
   }
 
   layDown () {
@@ -39,6 +44,14 @@ class Centaur {
   standUp () {
     this.standing = true;
     this.layingDown = false;
+    this.cranky = false;
+  }
+
+  drinkPotion () {
+    this.cranky = false;
+    if ( this.layingDown == true) {
+      return 'Not while I\'m laying down!'
+    }
   }
 }
 
