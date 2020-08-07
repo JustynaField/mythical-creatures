@@ -13,6 +13,14 @@ class Direwolf {
       this.huntsWhiteWalkers = false;
     }
   }
+  leave (stark) {
+    this.starksToProtect.forEach((item, index) => {
+      if (stark.name === item.name) {
+        item.safe = false;
+        this.starksToProtect.splice(index, 1)
+      }
+    });
+  }
 }
 
 
