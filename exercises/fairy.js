@@ -20,13 +20,15 @@ class Fairy {
     this.disposition = 'Vengeful'
   }
   replaceInfant(infant) {
+    // if(!infant)return
     this.counter++;
     if (this.counter < 3 && this.disposition === 'Vengeful') {
-      infant.disposition = 'Malicious';
       this.humanWards.push(infant);
+      infant.disposition = 'Malicious';
     } else {
       this.disposition = 'Good natured'
     }
+    return  infant 
   }
 
 }
